@@ -1,0 +1,110 @@
+ Copyright (C) 1995-2018 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.5.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	get_src_grid_info: source lat dims = (1813443)
+(0)	get_src_grid_info: source lon dims = (1813443)
+(0)	get_src_grid_info: source grid type is 'unstructured'
+(0)	unstructured_to_ESMF: triangulating the data to create the edges for your unstructured data.
+(0)	                      This can be VERY slow if you have a large array.
+(0)	                      To speed up code, provide your own edge vertices via the
+(0)	                      'ElementVertices' option.
+(0)	min/max ElementVertices = 0/1813442
+(0)	unstructured_to_ESMF: total number of elements created: 3626731
+(0)	unstructured_to_ESMF: Element Area: min:-2.531694853757926e-10 max:0.004830421489870673
+(0)	=====> CPU Elapsed Time: unstructured_to_ESMF: 6418.47 seconds <=====
+(0)	write_grid_description_file: writing unstructured 'Src' grid to an ESMF description file
+(0)	get_dst_grid_info: destination lat dims = (1455,1554)
+(0)	get_dst_grid_info: destination lon dims = (1455,1554)
+(0)	curvilinear_to_SCRIP: calculating grid corners...
+(0)	curvilinear_to_SCRIP: no lat values are at the poles, so
+(0)	       calculating grid corners using
+(0)	       calc_SCRIP_corners_noboundaries...
+(0)	calc_SCRIP_corners_noboundaries
+(0)	     min/max original lat: 29.234/30.9825
+(0)	     min/max original lon: -86.6615/-84.4893
+(0)	calc_SCRIP_corners_noboundaries
+(0)	     min/max Extlat2d: 29.2328/30.9837
+(0)	     min/max Extlon2d: -86.6629/-84.4879
+(0)	calc_SCRIP_corners_noboundaries
+(0)	     min/max ExtGridCenter_lat: 29.2334/30.9831
+(0)	     min/max ExtGridCenter_lon: -86.6622/-84.4886
+(0)	=====> CPU Elapsed Time: curvilinear_to_SCRIP: 1.35889 seconds <=====
+(0)	ESMF_regrid_gen_weights: number of processors used: 1
+(0)	--------------------------------------------------
+(0)	ESMF_regrid_gen_weights: the following command is about to be executed on the system:
+(0)	'ESMF_RegridWeightGen --ignore_degenerate --src_loc corner  --source source_grid_file.nc --destination destination_grid_file.nc --weight unstruct_to_rect_D2.nc --method neareststod --dst_regional --src_type ESMF -i'
+(0)	--------------------------------------------------
+(0)	ESMF_regrid_gen_weights: output from 'ESMF_RegridWeightGen':
+(0)	     
+(1)	      WARNING: deprecated switch -src_type will be ignored.  The file type will be detected automatically
+(2)	      Starting weight generation with these inputs: 
+(3)	        Source File: source_grid_file.nc
+(4)	        Destination File: destination_grid_file.nc
+(5)	        Weight File: unstruct_to_rect_D2.nc
+(6)	        Source File is in ESMF format
+(7)	        Source Grid is a global grid
+(8)	        Source Grid is an unstructured grid
+(9)	        Use the corner coordinates of the source grid to do the regrid
+(10)	        Destination File is in SCRIP format
+(11)	        Destination Grid is a regional grid
+(12)	        Destination Grid is a logically rectangular grid
+(13)	        Use the center coordinates of the destination grid to do the regrid
+(14)	        Regrid Method: nearest source to destination
+(15)	        Pole option: NONE
+(16)	        Ignore unmapped destination points
+(17)	        Ignore degenerate cells in the input grids
+(18)	        Line Type: cartesian
+(19)	        Norm Type: dstarea
+(20)	        Extrap. Method: none
+(21)	     
+(22)	      Completed weight generation successfully.
+(23)	     
+(0)	--------------------------------------------------
+(0)	ESMF_regrid_gen_weights: 'ESMF_RegridWeightGen' was successful.
+(0)	=====> CPU Elapsed Time: ESMF_regrid_gen_weights: 0.00683594 seconds <=====
+(0)	ESMF_regrid_with_weights: regridding using interpolation weights ...
+(0)	ESMF_regrid_with_weights: Source Grid:
+(0)	                          rank:      1
+(0)	                          dimensions: 1813443
+(0)	                          original source rank: 1
+(0)	                          latitude min/max: 5.8379134874/45.838806
+(0)	                          longitude min/max:-98.0021427904/-53.8117092634
+(0)	ESMF_regrid_with_weights: Destination Grid:
+(0)	                          dimensions: 1455 1554
+(0)	                          latitude min/max: 29.23397445678711/30.98249816894531
+(0)	                          longitude min/max:-86.66146850585938/-84.48928833007812
+(0)	ESMF_regrid_with_weights: retrieving interpolation weights ...
+(0)	ESMF_regrid_with_weights: calling sparse_matrix_mult to apply weights...
+(0)	ESMF_regrid_with_weights: dstData
+(0)	                          Dimensions: 1455 1554
+(0)	                          minSrcData: -3.42135
+(0)	                          maxSrcData: 6.983929439208684
+(0)	                          minDstData: 9.079273234376928e-05
+(0)	                          maxDstData: 4.851423504785598
+(0)	=====> CPU Elapsed Time: ESMF_regrid_with_weights: 0.487305 seconds <=====
+
+Variable: var_regrid
+Type: double
+Total Size: 18088560 bytes
+            2261070 values
+Number of Dimensions: 2
+Dimensions and sizes:	[1455] x [1554]
+Coordinates: 
+Number Of Attributes: 10
+  missing_value :	-99999
+  remap :	remapped via ESMF_regrid_with_weights: Nearest source to destination
+  lon2d :	<ARRAY of 2261070 elements>
+  lat2d :	<ARRAY of 2261070 elements>
+  long_name :	maximum water surface elevationabove geoid
+  standard_name :	maximum_sea_surface_height_above_geoid
+  location :	node
+  mesh :	adcirc_mesh
+  units :	m
+  _FillValue :	-99999
+_______________________________________________________________
+Start Epilog v20.08.28 on node h19c03 for job 13573794 :: Wed Nov 11 20:32:27 UTC 2020
+Job 13573794 (serial) finished for user Anil.Kumar in partition hera with exit code 0:0
+_______________________________________________________________
+End Epilogue v20.08.28 Wed Nov 11 20:32:27 UTC 2020

@@ -1,0 +1,4 @@
+# command to delete wrongly commited large files and then push
+
+git filter-branch --force --index-filter   'git rm --cached --ignore-unmatch ADCRIC_INNDATION/MAXELEV/geo_em.d02.nc'   --prune-empty --tag-name-filter cat -- --all
+
