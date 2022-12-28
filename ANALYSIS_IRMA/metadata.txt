@@ -1,0 +1,13 @@
+Sensor Service Output - The following time series is produced from extracting data from a real-time station and from archived data 
+
+Data Provider: Southeast Coastal Ocean Observing Regional Association (SECOORA)
+Data Provider URL: http://secoora.org/ 
+Data Source: USF CMS - Coastal Ocean Monitoring and Prediction System 
+Data Source URL: http://comps.marine.usf.edu/ 
+Platform Name: Big Carlos Pass (Active) 
+Latitude: 26.404 
+Longitude: -81.881 
+Creation Date: 2019-03-07T16:13:12Z 
+Start Time: 2017-05-03T06:00:00Z 
+End Time: 2019-03-07T14:54:00Z
+Notes: Times are always UTC. Disclaimer: This data is from a real-time data feed and has not been post-processed or checked for errors. Contact the data source for availability of quality controlled data.
