@@ -1,0 +1,27 @@
+3DEB_IDA              greenfrac_fpar_modis  landuse_30s_with_lakes                orogwd_1deg
+3DEB_PRVI             groundwater           landuse_5m                            orogwd_20m
+3DEP_13ARC            hangl                 maxsnowalb                            orogwd_2deg
+3DEP_13ARC_IRMA       hanis                 maxsnowalb_modis                      orogwd_30m
+3DEP_13ARC_SANDY      hasynw                maxsnowalb_modis.tar.bz2              rem_remapext.sh
+3DEP_1ARC_HAWAII      hasys                 modis_landuse_20class_15s             sandfrac_5m
+3DEP_FLORENCE         hasysw                modis_landuse_20class_30s             soiltemp_1deg
+3DEP_HAWAII           hasyw                 modis_landuse_20class_30s_with_lakes  soiltype_bot_10m
+3DEP_HAWAII_TIF       hawaii_data           modis_landuse_21class_30s             soiltype_bot_2m
+3DEP_HI_13ARCH_TIFF   hcnvx                 namelist.input                        soiltype_bot_30s
+3DEP_MICHAEL          hlennw                nlcd2001_ll_hawaii_30m                soiltype_bot_5m
+3DEP_NC_TO_NJ         hlens                 nlcd2006_ll_30s                       soiltype_top_10m
+3DEP_NEWORLEANS_IDA   hlensw                nlcd2006_ll_9s                        soiltype_top_2m
+COPY_3DEB_HAWAII      hlenw                 nlcd2006_ll_9s.tar.bz2                soiltype_top_30s
+NUDAPT44_1km          houston_area.tar      nlcd2011_1s                           soiltype_top_5m
+README                hslop                 nlcd2011_1s_21WATER                   ssib_landuse_10m
+albedo_modis          hstdv                 nlcd2011_30m                          ssib_landuse_5m
+albedo_modis.tar.bz2  hzmax                 nlcd2011_30m.tar                      topo_gmted2010_30s
+albedo_ncep           index.dms             nlcd2011_can_ll_9s                    urbfrac_nlcd2011
+bnu_soiltype_bot      islope                nlcd2011_can_ll_9s.tar.bz2            urbfrac_nlcd2011.tar.bz2
+bnu_soiltype_top      lai_modis_10m         nlcd2011_hi_5m                        varsso
+clayfrac_5m           lai_modis_30s         nlcd2011_imp_ll_9s                    varsso_10m
+convert_3dep.py       lake_depth            nlcd2011_imp_ll_9s.tar.bz2            varsso_2m
+crop                  landuse_10m           nlcd2011_ll_9s                        varsso_5m
+erod                  landuse_2m            nlcd2011_ll_9s.tar.bz2
+greenfrac             landuse_30s           orogwd_10m
+
